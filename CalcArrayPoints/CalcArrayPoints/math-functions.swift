@@ -52,6 +52,71 @@ func reduce(array: [Int], operation: ([Int]) -> Int) -> Int {
     return operation(array)
 }
 
+// Basic point math operations
+
+typealias Point = (Int, Int)
+
+func add(p1: Point, p2: Point) -> Point {
+    return (p1.0 + p2.0, p1.1 + p2.1)
+}
+
+func subtract(p1: Point, p2: Point) -> Point {
+    return (p1.0 - p2.0, p1.1 - p2.1)
+}
+
+// Int dictionary math operations
+
+typealias IntDictionary = [String : Int]
+
+func add(p1: IntDictionary?, p2: IntDictionary?) -> IntDictionary?
+{
+    let newX: Int = (p1?["x"] ?? 0) + (p2?["x"] ?? 0)
+    let newY: Int = (p1?["y"] ?? 0) + (p2?["y"] ?? 0)
+
+    return [
+        "x": newX,
+        "y": newY
+    ]
+}
+
+func subtract(p1: IntDictionary?, p2: IntDictionary?) -> IntDictionary?
+{
+    let newX: Int = (p1?["x"] ?? 0) - (p2?["x"] ?? 0)
+    let newY: Int = (p1?["y"] ?? 0) - (p2?["y"] ?? 0)
+
+    return [
+        "x": newX,
+        "y": newY
+    ]
+}
+
+// Double dictionary math operations
+
+typealias DoubleDictionary = [String : Double]
+
+func add(p1: DoubleDictionary?, p2: DoubleDictionary?) -> DoubleDictionary?
+{
+    let newX: Double = (p1?["x"] ?? 0.0) + (p2?["x"] ?? 0.0)
+    let newY: Double = (p1?["y"] ?? 0.0) + (p2?["y"] ?? 0.0)
+
+    return [
+        "x": newX,
+        "y": newY
+    ]
+}
+
+func subtract(p1: DoubleDictionary?, p2: DoubleDictionary?) -> DoubleDictionary?
+{
+    let newX: Double = (p1?["x"] ?? 0.0) - (p2?["x"] ?? 0.0)
+    let newY: Double = (p1?["y"] ?? 0.0) - (p2?["y"] ?? 0.0)
+
+    return [
+        "x": newX,
+        "y": newY
+    ]
+}
+
+
 
 
 
