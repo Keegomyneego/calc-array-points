@@ -10,45 +10,55 @@ import Foundation
 
 // Simple math operations
 
-func add(left: Int, right: Int) -> Int {
+func add(left: Int, right: Int) -> Int
+{
     return left + right
 }
 
-func subtract(left: Int, right: Int) -> Int {
+func subtract(left: Int, right: Int) -> Int
+{
     return left - right
 }
 
-func multiply(left: Int, right: Int) -> Int {
+func multiply(left: Int, right: Int) -> Int
+{
     return left * right
 }
 
-func divide(left: Int, right: Int) -> Int {
+func divide(left: Int, right: Int) -> Int
+{
     return left / right
 }
 
-func mathOperation(left: Int, right: Int, operation: (Int, Int) -> Int) -> Int {
+func mathOperation(left: Int, right: Int, operation: (Int, Int) -> Int) -> Int
+{
     return operation(left, right)
 }
 
 // Array math operations
 
-func add(array: [Int]) -> Int {
+func add(array: [Int]) -> Int
+{
     return (0..<array.count).map({ array[$0] }).reduce(0, +)
 }
 
-func multiply(array: [Int]) -> Int {
+func multiply(array: [Int]) -> Int
+{
     return (0..<array.count).map({ array[$0] }).reduce(0, *)
 }
 
-func count(array: [Int]) -> Int {
+func count(array: [Int]) -> Int
+{
     return array.count
 }
 
-func average(array: [Int]) -> Int {
+func average(array: [Int]) -> Int
+{
     return array.reduce(0, +) / array.count
 }
 
-func reduce(array: [Int], operation: ([Int]) -> Int) -> Int {
+func reduce(array: [Int], operation: ([Int]) -> Int) -> Int
+{
     return operation(array)
 }
 
@@ -56,11 +66,13 @@ func reduce(array: [Int], operation: ([Int]) -> Int) -> Int {
 
 typealias Point = (Int, Int)
 
-func add(p1: Point, p2: Point) -> Point {
+func add(p1: Point, p2: Point) -> Point
+{
     return (p1.0 + p2.0, p1.1 + p2.1)
 }
 
-func subtract(p1: Point, p2: Point) -> Point {
+func subtract(p1: Point, p2: Point) -> Point
+{
     return (p1.0 - p2.0, p1.1 - p2.1)
 }
 
