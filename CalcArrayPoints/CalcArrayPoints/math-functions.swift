@@ -44,7 +44,7 @@ func add(array: [Int]) -> Int
 
 func multiply(array: [Int]) -> Int
 {
-    return (0..<array.count).map({ array[$0] }).reduce(0, *)
+    return (0..<array.count).map({ array[$0] }).reduce(1, *)
 }
 
 func count(array: [Int]) -> Int
