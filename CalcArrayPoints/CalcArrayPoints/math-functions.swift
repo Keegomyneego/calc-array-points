@@ -33,11 +33,11 @@ func mathOperation(left: Int, right: Int, operation: (Int, Int) -> Int) -> Int {
 // Array math operations
 
 func add(array: [Int]) -> Int {
-    return (0..<array.count).reduce(0, +)
+    return (0..<array.count).map({ array[$0] }).reduce(0, +)
 }
 
 func multiply(array: [Int]) -> Int {
-    return (0..<array.count).reduce(0, *)
+    return (0..<array.count).map({ array[$0] }).reduce(0, *)
 }
 
 func count(array: [Int]) -> Int {
